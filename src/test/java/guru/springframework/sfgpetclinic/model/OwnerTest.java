@@ -1,14 +1,14 @@
 package guru.springframework.sfgpetclinic.model;
 
+import guru.springframework.sfgpetclinic.ModelTests;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Tag("model")
-class OwnerTest {
+class OwnerTest implements ModelTests {
 
     /**
      * Test assertions can be nested. In this case, Owner extends Person, and we want to

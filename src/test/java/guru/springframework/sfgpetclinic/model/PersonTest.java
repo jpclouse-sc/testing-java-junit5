@@ -1,17 +1,21 @@
 package guru.springframework.sfgpetclinic.model;
 
-import org.junit.jupiter.api.Tag;
+import guru.springframework.sfgpetclinic.ModelTests;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Grouped assertions are good for testing a number of things in one test, such as assignment of values to
  * class members. Grouping assertions with assertAll() causes all lambda expressions to be evaluated
  * even if some of them fail.
  */
-@Tag("model")
-class PersonTest {
+class PersonTest implements ModelTests {
 
     @Test
     void groupedAssertions() {
@@ -32,5 +36,4 @@ class PersonTest {
                 () -> assertEquals("Joe", person.getFirstName(), "First name failed"),
                 () -> assertEquals("Buck", person.getLastName(), "Last name failed"));
     }
-
 }
